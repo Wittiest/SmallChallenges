@@ -27,7 +27,7 @@ int		main(void)
 		{
 			cout << "Choose your move " << plrs.get_Mover() << '\n';			
 			cin >> move;
-		} while (board.isValid(move));
+		} while (!(board.isValid(move)));
 		plrs.move(board, move);
 	}
 	while (board.check_Winner());

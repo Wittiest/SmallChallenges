@@ -46,8 +46,8 @@ int	Board::check_Winner(void)
 
 int		Board::isValid(int move)
 {
-	if (move > 0 && move <= 9)
-		if (tikboard[move] == ('0' + move - 1))
+	if (move > 0 && move < 10)
+		if (tikboard[move - 1] == ('0' + move))
 			return (1);
 	return (0);
 }
@@ -64,7 +64,7 @@ void	Players::choose_Mark(void)
 	p_one_move = true;
 	total_moves = 0;
 }
-void	Players::move(Board board, int spot)
+void	Players::move(Board& board, int spot)
 {
 	board.change_Spot(spot, (p_one_move) ? p_one_mark : p_two_mark);
 	p_one_move = !p_one_move;
