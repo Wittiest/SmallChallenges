@@ -25,7 +25,7 @@ class			Board
 		void	initialize_Board(void);
 		void	draw_Board();
 		void	change_Spot(int spot, char mark);
-		int		check_Winner(void);
+		int		is_Winner(void);
 		int		isValid(int move);
 };
 

@@ -30,6 +30,8 @@ int		main(void)
 		} while (!(board.isValid(move)));
 		plrs.move(board, move);
 	}
-	while (board.check_Winner());
+	while (!(board.is_Winner()));
+	board.draw_Board();
+	cout << "The loser is " <<plrs.get_Mover() << '\n';
 	return (0);
 }
