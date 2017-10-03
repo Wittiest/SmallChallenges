@@ -12,7 +12,7 @@ $(NAME):
 	@g++ $(SRC) $(CFLAGS) -o $(NAME)
 	@echo "\033[32mCompiled Executable\033[0m"
 
-fclean: clean
+fclean:
 	@rm -rf $(NAME)
 	@echo "\033[32mRemoved Executable\033[0m"
 

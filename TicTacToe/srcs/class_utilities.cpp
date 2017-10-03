@@ -71,6 +71,11 @@ int		Board::isValid(int move)
 	return (0);
 }
 
+int		Players::no_moves(void)
+{
+	return (total_moves == 9);
+}
+
 void	Players::choose_Mark(void)
 {
 	cout << "Player 1, What character will be your mark?\n";

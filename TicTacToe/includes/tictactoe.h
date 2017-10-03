@@ -39,6 +39,7 @@ class			Players
 		void		choose_Mark(void);
 		void		move(Board& board, int spot);
 		const char	*get_Mover(void);
+		int			no_moves(void);
 };
 
 
