@@ -39,9 +39,28 @@ void	Board::change_Spot(int spot, char mark)
 	tikboard[spot - 1] = mark;
 }
 
-int	Board::check_Winner(void)
+int	Board::is_Winner(void)
 {
-	return (1);
+	char check;
+	int i;
+
+	for (i = 0; i < 3; i++) // check rows
+	{
+		check = tikboard[i];
+		if (check != '.' && (tikboard[i + 1] == check) && (tikboard[i + 2] == check))
+			return (1);
+	}
+	for (i = 0; i < 3; i++) // check columns
+	{
+		check = tikboard[i];
+		if (check != '.' && (tikboard[i + 3] == check) && (tikboard[i + 6] == check))
+			return (1);
+	}
+	if (tikboard[0] != '.' && (tikboard[0] == tikboard[4]) && (tikboard[0] == tikboard[8]))
+		return (1);
+	if (tikboard[2] != '.' && (tikboard[2] == tikboard[4]) && (tikboard[0] == tikboard[6]))
+		return (1);	
+	return (0);
 }
 
 int		Board::isValid(int move)
