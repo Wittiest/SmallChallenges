@@ -29,6 +29,11 @@ int		main(void)
 			cin >> move;
 		} while (!(board.isValid(move)));
 		plrs.move(board, move);
+		if (plrs.no_moves())
+		{
+			cout << "Tie!!\n";
+			return (0);
+		}
 	}
 	while (!(board.is_Winner()));
 	board.draw_Board();
