@@ -1,0 +1,10 @@
+20 male 25000
+25 male 45000
+23 male 30000
+16 male 7000
+30 male 55000
+22 female 27000
+26 female 44000
+21 female 37000
+18 female 17000
+29 female 62000
